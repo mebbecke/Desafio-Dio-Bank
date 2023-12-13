@@ -21,7 +21,7 @@ export abstract class DioAccount {
   }
 
   withdraw = (withdrawAmount: number): void => {
-    if(this.validateStatus() && this.balance > withdrawAmount){
+    if(this.validateStatus() && this.balance >= withdrawAmount){
       this.balance -= withdrawAmount
       console.log('Voce sacou', withdrawAmount)
     } else {
